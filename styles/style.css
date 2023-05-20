@@ -184,7 +184,7 @@ button[type=button]{
 
 @media screen and ( min-width: 1440px ){
     body{
-        background: url("/images/bg-main-desktop.png") no-repeat;
+        background: url("../images/bg-main-desktop.png") no-repeat;
     }
 
     main{
