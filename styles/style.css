@@ -18,7 +18,7 @@
 }
 
 body{
-    background: url(/images/bg-main-mobile.png) no-repeat;
+    background: url(../images/bg-main-mobile.png) no-repeat;
 }
 
 main{
@@ -33,7 +33,7 @@ main{
 
 section.cartoes > #cartao-costa{
     margin:1.2em 0 0 13.5% ;
-    background: url(/images/bg-card-back.png) no-repeat;
+    background: url(../images/bg-card-back.png) no-repeat;
     background-size: contain;
     height: 180px;
     width: 86%;
@@ -51,7 +51,7 @@ section.cartoes > #cartao-costa{
 
 section.cartoes > #cartao-frente{
     position: absolute;
-    background: url(/images/bg-card-front.png) no-repeat;
+    background: url(../images/bg-card-front.png) no-repeat;
     background-size: contain;
     height: 160px;
     width: 85%;
