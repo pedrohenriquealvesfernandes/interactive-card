@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main>
+    <section class="cartoes">
+        <div id="cartao-costa">
+          <p id="numero-verificacao">000</p>
+        </div>
+        <div id="cartao-frente">
+          <img src="/images/card-logo.svg" alt="Logo-cartao">
+          <p id="numero-cartao">0000 0000 0000 0000</p>
+          <div id="informacoes-pessoa">
+            <p id="nome-pessoa">Jane Appleseed</p>
+            <p id="data"><span id="mes-cartao">00</span>/<span id="ano-cartao">00</span></p>
+          </div>
+        </div>
+    </section>
+    <section class="formulario margem-desktop ">
+      <form action="/" autocomplete="off" method="post">
+        <div class="nome-cartao">
+          <label for="nome">Cardholder name</label>
+          <input type="text" name="nome" id="nome" placeholder="e.g JANE APPLESEED" required maxlength="30">
+          <p id="cartaonome-erro" class="erro"></p>
+        </div>
+        <div class="numero-cartao">
+          <label for="text">Card Number</label>
+          <input type="number" name="number" id="number" placeholder="e.g 1234 5678 9123 0000" required oninput="limitarCaracteresmax(this, 16)"> 
+          <p id="cartaonumero-erro" class="erro"></p>
+        </div>
+        <div class="cartao-verificacao">
+          <div class="data-cartao">
+            <label for="data">Exp. date (mm/yy)</label>
+            <div class="data">
+              <input type="number" placeholder="MM" maxlength="2" required  id="mes" oninput="limitarCaracteresmax(this, 2)">
+              <input type="number" placeholder="YY" maxlength="2" required  id="ano" oninput="limitarCaracteresmax(this, 2)">    
+            </div>
+            <div class="data-erro">
+              <p id="cartaomes-erro" class="erro"></p>
+              <p id="cartaoano-erro" class="erro"></p>
+            </div>
+          </div>
+          <div class="cvc-cartao">
+            <label for="cvc">CVC</label>
+            <input type="number" name="cvc" id="cvc" placeholder="e.g 123" oninput="limitarCaracteresmax(this, 3)" required>
+            <p id="cartaocvc-erro" class="erro"></p>
+          </div>
+        </div>
+        <button type="button" class="confirmar">Confirm</button>
+      </form>
+    </section>
+    <section class="complete margem-desktop ">
+        <div>
+          <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+          <div class="conteudo-texto">
+            <h2>THANK YOU!</h2>
+            <p>We've added your card details</p>
+          </div>
+          <button type="button" class="continuar">Continue</button>
+        </div>
+      </section>
+  </main>
+ 
+</body>
+<script src="js/cadastro.js"></script>
+</html>

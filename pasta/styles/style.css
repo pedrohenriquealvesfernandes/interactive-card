@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+:root{
+    --branco: hsl(0, 0%, 100%);
+    --cinza: hsl(270, 3%, 87%);
+    --cinzaescuro: hsl(279, 6%, 55%);
+    --roxomuitoescuro: hsl(278, 68%, 11%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(/images/bg-main-mobile.png) no-repeat;
+}
+
+main{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.cartoes{
+    width: 90%;
+    margin: 2.5em 1em;
+    position: relative;
+}
+
+section.cartoes > #cartao-costa{
+    margin:1.2em 0 0 13.5% ;
+    background: url(/images/bg-card-back.png) no-repeat;
+    background-size: contain;
+    height: 180px;
+    width: 86%;
+    position: relative;
+}
+
+#cartao-costa > p#numero-verificacao{
+    position: absolute;
+    top: 72px;
+    right: 35px; 
+    font-size: .65em;
+    color:var(--branco); 
+    letter-spacing: 2px;
+}
+
+section.cartoes > #cartao-frente{
+    position: absolute;
+    background: url(/images/bg-card-front.png) no-repeat;
+    background-size: contain;
+    height: 160px;
+    width: 85%;
+    top: 90px;
+    padding: 1.5em;
+    color:var(--cinza);
+}
+
+#cartao-frente > img{
+    width: 70px;
+}
+
+#cartao-frente > p#numero-cartao{
+    padding: 1em 0 .7em 0;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-family: 'Chivo Mono', monospace;
+    color: var(--branco);
+}
+
+#informacoes-pessoa{
+    font-size: .75em;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.formulario{
+    margin: 6em 2em 0;
+}
+
+.erro{
+    font-size: .8em;
+    color: red;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form > div{
+    margin: .5em 0;
+}
+
+label{
+    margin-bottom: .2em;
+    text-transform: uppercase;
+    font-size: .9em;
+    display: block;
+    letter-spacing: 1px;
+}
+
+input{
+    padding: .8em .5em;
+    width: 100%;
+    border-radius: 5px;
+    border:1px solid grey; 
+}
+
+input::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    color: rgba(151, 151, 151, 0.825);
+}
+
+input:focus{
+    border:2px solid var(--roxomuitoescuro);
+    outline: none;
+}
+
+.cartao-verificacao{
+  display: grid;
+  grid-template-columns: 49% 49%;
+  gap: 2%;
+}
+
+.data{
+    display: flex;
+    justify-content: space-between;
+}
+
+.data input{
+    width: 48%;
+    text-align: center;
+}
+
+.data-erro{
+    display: grid;
+    gap: 3%;
+    grid-template-columns: 48.5% 48.5%;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0;
+    display: none; 
+}
+
+button[type=button]{
+    margin-top: 1em;
+    background-color: var(--roxomuitoescuro);
+    border: none;
+    color: var(--branco);
+    font-weight: bold;
+    padding: 1.2em .5em; 
+    border-radius: 5px;
+    width: 100%;
+}
+
+.complete{
+    margin: 8em 2em 0 ;
+    display: none;
+    text-align: center;
+}
+
+.complete .conteudo-texto{
+    margin: 1.5em 0;
+}
+
+.conteudo-texto h2{
+    letter-spacing: 3px;
+    color: var(--roxomuitoescuro);
+    margin-bottom: .5em;
+}   
+
+.conteudo-texto p{
+    color: var(--cinzaescuro);
+}
+
+@media screen and ( min-width: 1440px ){
+    body{
+        background: url("/images/bg-main-desktop.png") no-repeat;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 55% 45%;
+    }
+
+    .cartoes{
+        width: 80%;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 7.5em 0 7.5em 10em;
+        position: static;    
+    }
+
+    section.cartoes > #cartao-frente{
+        position: static;
+        height: 220px;
+        width: 62.5%;
+    }
+
+    #cartao-frente > p#numero-cartao{
+        padding: 10% 0;
+        font-size: 1.8em;
+        color: var(--branco);
+    }
+
+    #informacoes-pessoa{
+        font-size: 0.9em;
+    }
+
+    section.cartoes > #cartao-costa{
+        position: relative;
+        height: 220px;
+        width: 62.5%;
+    }
+
+    #cartao-costa > p#numero-verificacao{
+        right: 50px;
+        top: 100px;
+        font-size: .8em;
+    }
+
+    .margem-desktop{
+        margin: auto 18em auto 0;
+    }
+
+}
