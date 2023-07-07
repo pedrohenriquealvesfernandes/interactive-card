@@ -7,7 +7,7 @@
 </div> <br>
 
 # **Sobre o Projeto**
-Projeto <strong>Interative-card</strong> disponibilizado por [Frontend Mentor](https://www.frontendmentor.io/home) feito utilizando responsividade (mobile:375px, desktop:1440px), grid layout, flexbox, mobile first. <br><br>
+Projeto <strong>Interative-card</strong> disponibilizado por [Frontend Mentor](https://www.frontendmentor.io/home) feito utilizando grid layout, flexbox, responsividade, mobile first e JavaScript. <br><br>
   
 
 # **Tecnologias**
@@ -28,4 +28,4 @@ Projeto <strong>Interative-card</strong> disponibilizado por [Frontend Mentor](h
 LinkedIn</a><br><br>
 
 # **Disponível**
-Clique <a href="https://pedrohenriquealvesfernandes.github.io/interactive-card/" style="color: cyan" target="_blank"><strong>AQUI</strong></a> para acessar a projeto em funcionamento.
+Clique <a href="https://pedrohenriquealvesfernandes.github.io/interactive-card/" style="color: cyan" target="_blank"><strong>AQUI</strong></a> para acessar a projeto em funcionamento (resolução a ser exibida 1366px (desktop) e 375px (celular) ).
