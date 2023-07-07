@@ -182,7 +182,7 @@ button[type=button]{
     color: var(--cinzaescuro);
 }
 
-@media screen and ( min-width: 1440px ){
+@media screen and ( min-width: 1366px ){
     body{
         background: url("../images/bg-main-desktop.png") no-repeat;
     }
@@ -208,7 +208,7 @@ button[type=button]{
 
     #cartao-frente > p#numero-cartao{
         padding: 10% 0;
-        font-size: 1.8em;
+        font-size: 169%;
         color: var(--branco);
     }
 
@@ -224,7 +224,7 @@ button[type=button]{
 
     #cartao-costa > p#numero-verificacao{
         right: 50px;
-        top: 100px;
+        top: 43%;
         font-size: .8em;
     }
 
